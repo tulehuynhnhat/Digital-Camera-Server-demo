@@ -12,7 +12,7 @@ app.use('/api/cart', cartRouter);
 
 // Error middleware handle
 app.use('/', (req, res, next) => {
-  next(new AppError(`URL: ${req.originalUrl} is invalid`, 404));
+  res.status(200).send('Digital Camera API');
 });
 
 app.use((error, req, res, next) => {
